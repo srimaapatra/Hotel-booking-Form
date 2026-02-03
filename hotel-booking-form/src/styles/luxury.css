@@ -1,0 +1,119 @@
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f") center/cover;
+}
+
+.overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  width: 95%;
+}
+
+.glass-card,
+.glass-summary {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 25px;
+  color: #fff;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+.glass-card:hover,
+.glass-summary:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+.glass-card { width: 65%; }
+.glass-summary { width: 35%; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+textarea { height: 80px; }
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 13px;
+  color: #ddd;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.field textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .glass-card, .glass-summary { width: 100%; }
+}
