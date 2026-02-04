@@ -84,14 +84,19 @@ const LuxuryBooking = () => {
               <input name="idNumber" placeholder="ID Number" required onChange={handleChange} />
             </div>
 
-            <div className="field">
-  <label>Check In</label>
-  <input type="date" name="checkIn" onChange={handleChange} />
-</div>
-<div className="field">
-  <label>Check Out</label>
-  <input type="date" name="checkOut" onChange={handleChange} />
-</div>
+            
+          <div className="date-row">
+  <div className="field">
+    <label>Check-in</label>
+    <input type="date" />
+  </div>
+
+  <div className="field">
+    <label>Check-out</label>
+    <input type="date" />
+  </div>
+  </div>
+
 
             <div className="field">
   <label>Adults</label>
