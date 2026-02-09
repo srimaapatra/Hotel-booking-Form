@@ -136,3 +136,30 @@ button {
   .container { flex-direction: column; }
   .glass-card, .glass-summary { width: 100%; }
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  .glass-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .grid,
+  .date-row {
+    grid-template-columns: 1fr !important;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .price-box,
+  .glass-summary {
+    margin-top: 15px;
+  }
+}
