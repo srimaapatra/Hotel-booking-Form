@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxury Hotel Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+  <div class="glass-card">
+
+    <h2>🏨 Luxury Hotel Booking</h2>
+
+    <form id="bookingForm">
+
+      <!-- Personal -->
+      <div class="row">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+
+      <div class="row">
+        <input type="text" id="aadhar" placeholder="Aadhar Number" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+      </div>
+
+      <!-- Dates -->
+      <div class="row label-row">
+        <div>
+          <label>Check-in</label>
+          <input type="date" id="checkin" required>
+        </div>
+
+        <div>
+          <label>Check-out</label>
+          <input type="date" id="checkout" required>
+        </div>
+      </div>
+
+      <!-- Guests -->
+      <div class="row label-row">
+        <div>
+          <label>Adults</label>
+          <input type="number" id="adults" min="1" value="1">
+        </div>
+
+        <div>
+          <label>Children</label>
+          <input type="number" id="children" min="0" value="0">
+        </div>
+      </div>
+
+      <!-- Room -->
+      <div class="row label-row">
+        <div>
+          <label>Room Type</label>
+          <select id="room">
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Request -->
+      <textarea id="request" placeholder="Special Request"></textarea>
+
+      <!-- Payment -->
+      <h3>💳 Payment Method</h3>
+
+      <div class="payment">
+
+        <label>
+          <input type="radio" name="pay" value="card" checked>
+          Card
+        </label>
+
+        <label>
+          <input type="radio" name="pay" value="upi">
+          UPI
+        </label>
+
+        <label>
+          <input type="radio" name="pay" value="cash">
+          Pay at Hotel
+        </label>
+
+      </div>
+
+      <!-- Card -->
+      <div id="cardBox">
+
+        <div class="row">
+          <input type="text" placeholder="Card Number">
+          <input type="text" placeholder="Card Holder">
+        </div>
+
+        <div class="row">
+          <input type="text" placeholder="MM/YY">
+          <input type="text" placeholder="CVV">
+        </div>
+
+      </div>
+
+      <!-- Price -->
+      <div class="price">
+        Total: ₹<span id="price">0</span>
+      </div>
+
+      <button type="submit">Book Now</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <h2>✅ Booking Confirmed</h2>
+
+    <p id="summary"></p>
+
+    <button onclick="closeModal()">Close</button>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
